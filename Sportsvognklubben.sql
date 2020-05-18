@@ -15,7 +15,6 @@ CREATE TABLE Klubinfo (
 	Adresse varchar(55) NOT NULL,
 	Telefonnummer int NOT NULL,
 	Postnummer int NOT NULL,
-	Medlemsnummer int NOT NULL,
 	Indmeldingsdato varchar(55) NOT NULL,
 	Biltype varchar(55) NOT NULL,
 	Bilensaargang varchar(55) NOT NULL,
@@ -23,8 +22,12 @@ CREATE TABLE Klubinfo (
 );
 
 --Indsætter data i tabellen "Klubinfo"
-INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','1','18-05-2020','Fedøse','1845','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','18-05-2020','Fedøse','1845','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Mads','Finseth','Mars','112','5200','18-05-2020','3hjuletcykel','1980','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-2020','Elefant','1990','Andeninfokommerher')
 
-
+--Se tabel indhold
 SELECT * FROM Klubinfo;
 
+--Slet tabel
+DROP TABLE Klubinfo;
