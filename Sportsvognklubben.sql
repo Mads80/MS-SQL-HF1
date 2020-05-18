@@ -50,7 +50,7 @@ INSERT INTO Bilklasse VALUES ('Kabriolet')
 SELECT * FROM Bilklasse;
 
 --Vis biltyper efter klasse
-SELECT Klasse
+SELECT Klasse, BilklasseID
 FROM Klubinfo, Bilklasse
 WHERE BilklasseID = Biltype
 Order by BilklasseID
