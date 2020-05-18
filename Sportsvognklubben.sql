@@ -36,7 +36,7 @@ SELECT * FROM Klubinfo;
 Opgave B
 ------------------------------------------------------------------------------------------------------------------------------*/
 
---Opretter en Stored procedure til at ændre data i tabel---------------------------------------------------------------------------------------------------
+--Opretter en Stored procedure til at ændre data i tabel
 Create procedure Medlemmer
 
 @Fornavn varchar(20),
