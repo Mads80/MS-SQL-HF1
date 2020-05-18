@@ -1,10 +1,13 @@
 --HEJ <3
 USE master
 
+--Først opretter vi en database
 CREATE DATABASE Sportsvognklub;
 GO
+--Bruger den nyoprettede database
 USE Sportsvognklub;
 
+--Opretter en tabel med navnet "Klubinfo"
 CREATE TABLE Klubinfo (
 	ID int IDENTITY (1,1) PRIMARY KEY,
 	Fornavn varchar(55) NOT NULL,
