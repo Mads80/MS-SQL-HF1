@@ -27,3 +27,6 @@ INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','1',
 
 
 SELECT * FROM Klubinfo;
+
+
+
