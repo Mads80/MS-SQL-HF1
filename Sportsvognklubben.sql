@@ -32,12 +32,8 @@ INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-20
 --Se tabel indhold
 SELECT * FROM Klubinfo;
 
---Slet tabel
-DROP TABLE Klubinfo;
-
-
 /*-----------------------------------------------------------------------------------------------------------------------------
-Opgave F 
+Opgave F_a
 ------------------------------------------------------------------------------------------------------------------------------*/
 
 --CREATE DB BACKUP
@@ -49,9 +45,46 @@ USE master
 RESTORE DATABASE Sportsvognklub
 FROM DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
 
+--BACKUP DB PROCEDURE
 CREATE PROCEDURE BackupDB
 AS
 BACKUP DATABASE Sportsvognklub
 TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
 
+--Kør ovenstående
 EXEC BackupDB;
+
+--RESTORE DB PROCEDURE
+CREATE PROCEDURE RestoreDB
+AS
+RESTORE DATABASE Sportsvognklub
+TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+
+EXEC RestoreDB;
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+Opgave F_b
+------------------------------------------------------------------------------------------------------------------------------*/
+
+--Slet database
+DROP DATABASE Sportsvognklub;
+--Slet tabel
+DROP TABLE Klubinfo;
+
+--Slet database procedure
+Create Procedure SletDB
+AS
+Drop database Sportsvognklub;
+
+EXEC SletDB;
+
+--Slet tabel procedure
+Create Procedure SletTabel
+AS
+Drop table Klubinfo;
+
+EXEC SletTabel;
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+Opgave G
+------------------------------------------------------------------------------------------------------------------------------*/
