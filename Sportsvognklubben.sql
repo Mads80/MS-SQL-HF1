@@ -12,7 +12,7 @@ USE Sportsvognklub;
 
 --Opretter en tabel med navnet "Klubinfo"
 CREATE TABLE Klubinfo (
-	ID int IDENTITY (1,1) PRIMARY KEY,
+	Medlemsnummer int IDENTITY (1,1) PRIMARY KEY,
 	Fornavn varchar(55) NOT NULL,
 	Efternavn varchar(55) NOT NULL,
 	Adresse varchar(55) NOT NULL,
@@ -33,18 +33,24 @@ INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-20
 SELECT * FROM Klubinfo;
 
 USE Sportsvognklub;
-
+--Opretter en tabel med navnet "Bilklasse"
 CREATE TABLE Bilklasse (
-	ID int IDENTITY (1,1) PRIMARY KEY,
+	BilklasseID int IDENTITY (1,1) PRIMARY KEY,
 	Klasse varchar(55) NOT NULL
 );
 
+--Indsætter data i tabellen "Bilklasse"
 INSERT INTO Bilklasse VALUES ('Personbil')
 INSERT INTO Bilklasse VALUES ('Sportsvogn')
 INSERT INTO Bilklasse VALUES ('Veteran')
 INSERT INTO Bilklasse VALUES ('Kabriolet')
 
+--Se tabel indhold
 SELECT * FROM Bilklasse;
+
+SELECT Biltype, Bilklasse
+FROM Klubinfo, Bilklasse
+WHERE Biltype = Klasse
 
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave B
@@ -68,7 +74,7 @@ Values (@Fornavn, @Efternavn, @Adresse, @Telefonnummer, @Postnummer, @Indmelding
 Go
 
 --Her executer vi det nye medlem
-exec Medlemmer 'brian', 'Briansen', 'Odense', '200', '5000', '18-5-2020', 'C', '2000', 'Andeninfokommerher'
+Exec Medlemmer 'Brian', 'Briansen', 'Odense', '200', '5000', '18-5-2020', '3', '2000', 'Andeninfokommerher'
 
 --Opretter procedure til at finde et medlem ved hjælp af navn
 
@@ -79,14 +85,14 @@ select * from Klubinfo
 Where  Fornavn =  @fornavn
 go
 
-exec Find_medlem 'Mads'
+Exec Find_medlem 'Mads'
 
 --En SP som tæller hvor mange medlemmer vi har
 Create procedure Antal
 AS
 Begin
 --Herfra køre du til og med rowcount. I result ser man 2 kasser, hvor den første består af medlemmer og anden kasse tæller hvor mange medlemmer der er. 
-    Select * from Klubinfo 
+Select * from Klubinfo 
 End
 Exec Antal
 Select @@rowcount
