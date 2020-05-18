@@ -25,9 +25,10 @@ CREATE TABLE Klubinfo (
 );
 
 --Indsætter data i tabellen "Klubinfo"
-INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','18-05-2020','1','1845','Andeninfokommerher')
-INSERT INTO Klubinfo VALUES ('Mads','Finseth','Mars','112','5200','18-05-2020','2','1980','Andeninfokommerher')
-INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-2020','3','1990','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','18-05-2020','2','1845','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Mads','Finseth','Mars','112','5200','18-05-2020','1','1980','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-2020','4','1990','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Jane','Doe','Østrig','55555555','4600','12-07-2020','3','1790','Andeninfokommerher')
 
 --Se tabel indhold
 SELECT * FROM Klubinfo;
@@ -48,9 +49,11 @@ INSERT INTO Bilklasse VALUES ('Kabriolet')
 --Se tabel indhold
 SELECT * FROM Bilklasse;
 
-SELECT Biltype, Bilklasse
+--Vis biltyper efter klasse
+SELECT Klasse
 FROM Klubinfo, Bilklasse
-WHERE Biltype = Klasse
+WHERE BilklasseID = Biltype
+Order by BilklasseID
 
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave B
@@ -90,8 +93,8 @@ Exec Find_medlem 'Mads'
 --En SP som tæller hvor mange medlemmer vi har
 Create procedure Antal
 AS
+--Herfra køre du til og med rowcount. I result ser man 2 kasser, hvor den første består af medlemmer og anden kasse tæller hvor mange medlemmer der er.
 Begin
---Herfra køre du til og med rowcount. I result ser man 2 kasser, hvor den første består af medlemmer og anden kasse tæller hvor mange medlemmer der er. 
 Select * from Klubinfo 
 End
 Exec Antal
