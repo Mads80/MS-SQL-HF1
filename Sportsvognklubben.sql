@@ -38,27 +38,26 @@ Opgave F_a
 
 --CREATE DB BACKUP
 BACKUP DATABASE Sportsvognklub
-TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+TO DISK = 'C:\Sportsvognklubben.bak';
 
 --RESTORE DB BACKUP
 USE master
 RESTORE DATABASE Sportsvognklub
-FROM DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+FROM DISK = 'C:\Sportsvognklubben.bak';
 
 --BACKUP DB PROCEDURE
 CREATE PROCEDURE BackupDB
 AS
 BACKUP DATABASE Sportsvognklub
-TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+TO DISK = 'C:\Sportsvognklubben.bak';
 
---Kør ovenstående
 EXEC BackupDB;
 
 --RESTORE DB PROCEDURE
 CREATE PROCEDURE RestoreDB
 AS
 RESTORE DATABASE Sportsvognklub
-TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+TO DISK = 'C:\Sportsvognklubben.bak';
 
 EXEC RestoreDB;
 
