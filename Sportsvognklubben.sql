@@ -80,7 +80,6 @@ Go
 Exec Medlemmer 'Brian', 'Briansen', 'Odense', '200', '5000', '18-5-2020', '3', '2000', 'Andeninfokommerher'
 
 --Opretter procedure til at finde et medlem ved hjælp af navn
-
 create procedure Find_medlem
 @Fornavn varchar (20)
 AS
