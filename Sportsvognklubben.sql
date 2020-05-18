@@ -59,7 +59,7 @@ Order by BilklasseID
 Opgave B
 ------------------------------------------------------------------------------------------------------------------------------*/
 
---Opretter en Stored procedure til at ændre data i tabel
+--Opretter en SP der tilføjer data til en tabel
 Create procedure Medlemmer
 
 @Fornavn varchar(20),
@@ -89,15 +89,16 @@ go
 
 Exec Find_medlem 'Mads'
 
---En SP som tæller hvor mange medlemmer vi har
+--En SP som viser antal medlemmer
 Create procedure Antal
 AS
---Herfra køre du til og med rowcount. I result ser man 2 kasser, hvor den første består af medlemmer og anden kasse tæller hvor mange medlemmer der er.
+--Start
 Begin
 Select * from Klubinfo 
 End
 Exec Antal
 Select @@rowcount
+--Slut
 
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave C
