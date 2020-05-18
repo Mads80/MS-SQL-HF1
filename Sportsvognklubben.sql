@@ -21,3 +21,9 @@ CREATE TABLE Klubinfo (
 	Bilensaargang varchar(55) NOT NULL,
 	Andeninfo varchar(55)
 );
+
+--Indsætter data i tabellen "Klubinfo"
+INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','1','18-05-2020','Fedøse','1845','Andeninfokommerher')
+
+
+SELECT * FROM Klubinfo;
