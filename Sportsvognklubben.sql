@@ -31,3 +31,24 @@ SELECT * FROM Klubinfo;
 
 --Slet tabel
 DROP TABLE Klubinfo;
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------
+Opgave F 
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+--CREATE DB BACKUP
+BACKUP DATABASE Sportsvognklub
+TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+
+--RESTORE DB BACKUP
+USE master
+RESTORE DATABASE Sportsvognklub
+FROM DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+
+CREATE PROCEDURE BackupDB
+AS
+BACKUP DATABASE Sportsvognklub
+TO DISK = 'C:\Users\Mads\Documents\GitHub\database_hf1\Sportsvognklubben.bak';
+
+EXEC BackupDB;
