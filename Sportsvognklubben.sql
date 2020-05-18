@@ -33,6 +33,41 @@ INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-20
 SELECT * FROM Klubinfo;
 
 /*-----------------------------------------------------------------------------------------------------------------------------
+Opgave B
+------------------------------------------------------------------------------------------------------------------------------*/
+
+--Opretter en Stored procedure til at ændre data i tabel---------------------------------------------------------------------------------------------------
+Create procedure Medlemmer
+
+@Fornavn varchar(20),
+@Efternavn varchar(20),
+@Adresse varchar(20),
+@Telefonnummer Int,
+@Postnummer Int,
+@Indmeldingsdato varchar(20),
+@Biltype varchar(20),
+@Bilensaargang int,
+@Andeninfo varchar (20)
+as
+INSERT INTO Klubinfo (Fornavn, Efternavn, Adresse, Telefonnummer, Postnummer, Indmeldingsdato, Biltype, Bilensaargang, Andeninfo)
+Values (@Fornavn, @Efternavn, @Adresse, @Telefonnummer, @Postnummer, @Indmeldingsdato, @Biltype, @Bilensaargang, @Andeninfo)
+Go
+
+--Her executer vi det nye medlem
+exec Medlemmer 'brian', 'Briansen', 'Odense', '200', '5000', '18-5-2020', 'knallert', '2000', 'Andeninfokommerher'
+
+--Opretter procedure til at finde et medlem ved hjælp af navn------------------------------------------------------------------------------------------------------------------------------------------
+
+create procedure Find_medlem
+@Fornavn varchar (20)
+AS
+select * from Klubinfo
+Where  Fornavn =  @fornavn
+go
+
+exec Find_medlem 'Mads'
+
+/*-----------------------------------------------------------------------------------------------------------------------------
 Opgave F_a
 ------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -87,3 +122,16 @@ EXEC SletTabel;
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave G
 ------------------------------------------------------------------------------------------------------------------------------*/
+
+create procedure Find_medlem
+
+@Fornavn varchar (20)
+
+AS
+
+select * from Klubinfo
+Where  Fornavn =  @fornavn
+
+go
+
+exec Find_medlem 'Mads'
