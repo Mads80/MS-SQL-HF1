@@ -104,6 +104,11 @@ Select @@rowcount
 Opgave C
 ------------------------------------------------------------------------------------------------------------------------------*/
 
+--Opretter View af Medlemsnummer,Navn,Efternav,Biltype og Årgang
+CREATE VIEW Medlemmer_køre
+as
+select Medlemsnummer, Fornavn, Efternavn, Klasse, Bilensaargang From Klubinfo, Bilklasse Where Biltype=BilklasseID
+
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave D
 ------------------------------------------------------------------------------------------------------------------------------*/
