@@ -24,6 +24,7 @@ Lav script til at udskrive forskellige relevante data fra tabellerne.
 Det er vigtigt at der laves kommentar i koden før hver nyt område så der holdes god orden i koden.
 
 Opgave B
+
 Der skal laves script til Stored Procedure som indsætter data i tabellerne.
 Lav en Stored Procedure(SP) som tæller hvor mange medlemmer klubben har.
 Der skal laves Stored Procedure som søger relevante data i tabellerne. 
