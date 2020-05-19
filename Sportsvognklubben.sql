@@ -1,7 +1,6 @@
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave A 
 ------------------------------------------------------------------------------------------------------------------------------*/
-
 USE master
 
 --Først opretter vi en database
@@ -31,7 +30,7 @@ INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-20
 INSERT INTO Klubinfo VALUES ('Jane','Doe','Østrig','55555555','4600','12-07-2020','3','1790','Andeninfokommerher')
 INSERT INTO Klubinfo VALUES ('Hans','Hansen','Sverige','78987612','3600','11-01-2020','3','2020','Andeninfokommerher')
 
---Se tabel indhold
+--Se tabel "Klubinfo" indhold
 SELECT * FROM Klubinfo;
 
 USE Sportsvognklub;
