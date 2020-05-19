@@ -199,3 +199,4 @@ For eksempel SQL Server->Security->Server Roles herefter højreklikkes der på "Se
 Efter der er fyldt de nødvendige data ind kan der nu trykkets på "Script" oppe ved siden af "Help", dette vil give en ny Query med den code der skal til.
 
 */
+
