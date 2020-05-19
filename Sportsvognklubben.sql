@@ -191,3 +191,10 @@ EXEC SletTabel;
 Opgave G
 ------------------------------------------------------------------------------------------------------------------------------*/
 
+/*
+
+Der kan operrets Scripts ikke kun til login men mange andre funktioner. Dette vises ved hjælp af et billede med testen Script ved siden af den.
+for eksempel SQL Server->Security->Server Roles herefter højreklikker der på "Server Roles" og "New Server Roles". Efter der er fuldt de nødvendige
+data in kan der nu trykkets på "Script" oppe ved siden af "Help", dette vil give en ny Query med den code der skal til.
+
+*/
