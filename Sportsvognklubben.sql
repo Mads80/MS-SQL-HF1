@@ -121,13 +121,11 @@ Opgave E
 --Først opretter du et nyt "Login" her: Sercurity->Logins->New Login...
 use Sportsvognklub
 create user MadsHarEnSportsVogn for login MadsHarEnSportsVogn
-create user MarHarEnKabriolet for login MarHarEnKabriolet
---Grant Permission
---Use <database-name>
+create user MarkHarEnKabriolet for login MarkHarEnKabriolet
 --Grant <permission-name> on <object-name> to <username\principle>
 GO
---Giv brugeren "MarHarEnKabriolet" lov til at læse i "Klubinfo" og ikke andet
-Grant Select on Klubinfo to MarHarEnKabriolet
+--Giv brugeren "MarkHarEnKabriolet" lov til at læse i tabellen "Klubinfo" og ikke andet
+Grant Select on Klubinfo to MarkHarEnKabriolet
 
 -- Opretter en ny bruger med Windows autentifikation
 USE [Sportsvognklub]
