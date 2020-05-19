@@ -9,7 +9,7 @@ CREATE DATABASE Sportsvognklub;
 GO
 --Bruger den nyoprettede database
 USE Sportsvognklub;
-
+GO
 --Opretter en tabel med navnet "Klubinfo"
 CREATE TABLE Klubinfo (
 	Medlemsnummer int IDENTITY (1,1) PRIMARY KEY,
@@ -40,7 +40,7 @@ CREATE TABLE Bilklasse (
 	BilklasseID int IDENTITY (1,1) PRIMARY KEY,
 	Klasse varchar(55) NOT NULL
 );
-
+GO
 --Indsætter data i tabellen "Bilklasse"
 INSERT INTO Bilklasse VALUES ('Personbil')
 INSERT INTO Bilklasse VALUES ('Sportsvogn')
