@@ -198,3 +198,4 @@ for eksempel SQL Server->Security->Server Roles herefter højreklikker der på "Se
 data in kan der nu trykkets på "Script" oppe ved siden af "Help", dette vil give en ny Query med den code der skal til.
 
 */
+
