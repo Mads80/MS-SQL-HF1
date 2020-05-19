@@ -49,7 +49,7 @@ INSERT INTO Bilklasse VALUES ('Kabriolet')
 --Se tabel indhold
 SELECT * FROM Bilklasse;
 
---Vis biltyper efter klasse
+--Vis biltyper, sorter efter "BilklasseID"
 SELECT Klasse, BilklasseID
 FROM Klubinfo, Bilklasse
 WHERE BilklasseID = Biltype
@@ -104,7 +104,7 @@ Select @@rowcount
 Opgave C
 ------------------------------------------------------------------------------------------------------------------------------*/
 
---Opretter View af Medlemsnummer,Navn,Efternav,Biltype og Årgang
+--Opretter View af Medlemsnummer, Navn, Efternav, Biltype og Årgang
 CREATE VIEW Medlemmer_køre
 as
 select Medlemsnummer, Fornavn, Efternavn, Klasse, Bilensaargang From Klubinfo, Bilklasse Where Biltype=BilklasseID
@@ -116,6 +116,23 @@ Opgave D
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave E
 ------------------------------------------------------------------------------------------------------------------------------*/
+
+--CREATE SQL USER
+--Først opretter du et nyt "Login" her: Sercurity->Logins->New Login...
+use Sportsvognklub
+create user MadsHarEnSportsVogn for login MadsHarEnSportsVogn
+create user MarHarEnKabriolet for login MarHarEnKabriolet
+--Grant Permission
+--Use <database-name>
+--Grant <permission-name> on <object-name> to <username\principle>
+GO
+Grant select on Klubinfo to MarHarEnKabriolet
+
+-- Opretter en ny bruger med Windows autentifikation
+USE [Sportsvognklub]
+GO
+CREATE USER [Jonas B] FOR LOGIN [DESKTOP-MBOR3K8\Jonas Bagge] WITH DEFAULT_SCHEMA=[db_accessadmin]
+GO
 
 /*-----------------------------------------------------------------------------------------------------------------------------
 Opgave F_a
