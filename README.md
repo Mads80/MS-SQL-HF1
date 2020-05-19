@@ -1,8 +1,6 @@
-# database_hf1
-SQL opgave HF1
- Opgaven:
- 
- 	Database 	
+	Database 	
+Opgaven:
+
 Sportsvogn klubben
 Alt i denne opgave løses på en MS-SQL databaseserver og udføres i sql script. Du laver et script som opdeles og kommenteres af dig.  Scriptet sendes til den relevante lærers mailadresse samt præsenteres for en database lærer.
 
@@ -33,7 +31,6 @@ Der skal laves script til at ændre data i tabellerne.
 Opgave C
 Lav et View der indeholder data fra to tabeller.
 
-
 Opgave D
 Fremstil et diagram over alle tabeller i din database med Sql serverens indbyggede diagram værktøj.
 
@@ -48,7 +45,6 @@ Lav restore script til databasen i en Stored Procedure.
 Tag en backup med dit program script og slet noget i databasen eller hele databasen og genetabler din database med dit script.
 Hint: man kan ikke slette en database man er i og man kan ikke være i en database under genetablering. Du har mulighed for at stoppe og starte databaser.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-
 
 Opgave F
 Der skal laves script til at fjerne alle tabeller og hele databasen.
