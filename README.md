@@ -2,6 +2,7 @@
 Opgaven:
 
 Sportsvogn klubben
+
 Alt i denne opgave løses på en MS-SQL databaseserver og udføres i sql script. Du laver et script som opdeles og kommenteres af dig.  Scriptet sendes til den relevante lærers mailadresse samt præsenteres for en database lærer.
 
 Opgave A:
