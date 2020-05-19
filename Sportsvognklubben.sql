@@ -193,9 +193,9 @@ Opgave G
 
 /*
 
-Der kan operrets Scripts ikke kun til login men mange andre funktioner. Dette vises ved hjælp af et billede med testen Script ved siden af den.
-for eksempel SQL Server->Security->Server Roles herefter højreklikker der på "Server Roles" og "New Server Roles". Efter der er fuldt de nødvendige
-data in kan der nu trykkets på "Script" oppe ved siden af "Help", dette vil give en ny Query med den code der skal til.
+Der kan oprettes “Scripts” ikke kun til Login, men mange andre funktioner.
+Dette vises ved hjælp af et billede med teksten “Script” ved siden af den.
+For eksempel SQL Server->Security->Server Roles herefter højreklikkes der på "Server Roles" og "New Server Roles".
+Efter der er fyldt de nødvendige data ind kan der nu trykkets på "Script" oppe ved siden af "Help", dette vil give en ny Query med den code der skal til.
 
 */
-
