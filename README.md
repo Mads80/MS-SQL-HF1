@@ -39,13 +39,11 @@ Opgave E
 Lav et script som opretter en bruger med både SQL autentifikation og en med Windows autentifikation.
 Tildel rettigheder så den nye bruger kun kan læse tabellerne i bil databasen og ikke andet. 
 
-----------------------------------------------------------------------------------------------------------------------------------------------
 Opgave F
 Lav backup af databasen med et script og gerne i en Stored Procedure .
 Lav restore script til databasen i en Stored Procedure.
 Tag en backup med dit program script og slet noget i databasen eller hele databasen og genetabler din database med dit script.
 Hint: man kan ikke slette en database man er i og man kan ikke være i en database under genetablering. Du har mulighed for at stoppe og starte databaser.
----------------------------------------------------------------------------------------------------------------------------------------------
 
 Opgave F
 Der skal laves script til at fjerne alle tabeller og hele databasen.
