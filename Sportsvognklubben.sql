@@ -126,7 +126,8 @@ create user MarHarEnKabriolet for login MarHarEnKabriolet
 --Use <database-name>
 --Grant <permission-name> on <object-name> to <username\principle>
 GO
-Grant select on Klubinfo to MarHarEnKabriolet
+--Giv brugeren "MarHarEnKabriolet" lov til at læse i "Klubinfo" og ikke andet
+Grant Select on Klubinfo to MarHarEnKabriolet
 
 -- Opretter en ny bruger med Windows autentifikation
 USE [Sportsvognklub]
