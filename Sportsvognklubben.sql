@@ -29,6 +29,7 @@ INSERT INTO Klubinfo VALUES ('Mark','Pedersen','Hanborienhule','666','5000','18-
 INSERT INTO Klubinfo VALUES ('Mads','Finseth','Mars','112','5200','18-05-2020','1','1980','Andeninfokommerher')
 INSERT INTO Klubinfo VALUES ('Jonas','Henriksen','Afrika','114','5300','18-05-2020','4','1990','Andeninfokommerher')
 INSERT INTO Klubinfo VALUES ('Jane','Doe','Østrig','55555555','4600','12-07-2020','3','1790','Andeninfokommerher')
+INSERT INTO Klubinfo VALUES ('Hans','Hansen','Sverige','78987612','3600','11-01-2020','3','2020','Andeninfokommerher')
 
 --Se tabel indhold
 SELECT * FROM Klubinfo;
